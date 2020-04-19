@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_app_last/detailed_view2.dart';
+import 'detailed_view2.dart';
 
 final _auth = FirebaseAuth.instance;
 String loggedInUser;
@@ -36,7 +36,7 @@ class _Tab2State extends State<Tab2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: Colors.black12,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -155,6 +155,8 @@ class _Tab2State extends State<Tab2> {
                         EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
                     children: messageWidgets,
                   ));
+                } else {
+                  return Container();
                 }
               },
             ),
